@@ -1,0 +1,36 @@
+.line{
+  padding-top: 90px;
+}
+.privacyPolicy{
+  width: 100%;
+  margin-top:100px;
+  margin-bottom:100px;
+  .container{
+    max-width: 1220px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  &__title{
+    @include text($familyLena,normal,400,48px,48px,#314E57);
+  }
+  &__allText{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  &__textBlock{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &__subtitle{
+    @include text("Rubik",normal,500,16px,19px,#314E57);
+
+  }
+  &__text{
+    @include text("Rubik",normal,300,16px,19px,#999999);
+  }
+
+}

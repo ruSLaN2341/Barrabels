@@ -1,0 +1,88 @@
+.header{
+  position: relative;
+  .container{
+    width: 1220px;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    justify-content: space-between;
+  }
+  &__logo{
+    @include text($familyLena,normal,400,32px,32px,#243A41);
+    text-align: center;
+  }
+  &__box{
+    display: flex;
+
+  }
+  &__nav{
+    display: flex;
+    column-gap: 62px;
+    align-items: center;
+    &-link{
+      @include text("Rubik",normal,400,18px,21px,#314E57);
+      transition: all 0.1s ease-in-out;
+      &:hover{
+        transform: scale(1.1);
+        font-weight: 600;
+      }
+    }
+  }
+  &__searchBtn{
+    background: transparent;
+    cursor: pointer;
+    margin-right: 17px;
+  }
+  &__purchases{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+  &__searchField{
+    display: none;
+    width: 242px;
+    height: 51px;
+    padding: 16px;
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+  }
+  &__searchBtn{
+    position: relative;
+    z-index: 3;
+    &:hover{
+      .header__searchField{
+        display: block;
+        position: absolute;
+        bottom: 50%;
+        right: -9px;
+        transform: translateY(50%);
+        z-index: -1;
+      }
+    }
+  }
+  &__cart{
+    position: relative;
+    &::before{
+      content: attr(number);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -25%;
+      right:-25%;
+      background: #8AC44B;
+      border-radius: 50%;
+      width: 17px;
+      height: 17px;
+      z-index: 10;
+    }
+  }
+  &__sum{
+    @include text("Rubik",normal,600,16px,19px,#314E57);
+  }
+}

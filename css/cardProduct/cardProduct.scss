@@ -1,0 +1,184 @@
+.line{
+  padding-top: 90px;
+}
+.cardProduct{
+  width: 100vw;
+  margin-top: 63px;
+  .container{
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    column-gap: 20px;
+  }
+  &__description{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+    &-img{
+      width: 443px;
+      height: 196px;
+      border-radius: 5px;
+    }
+    &-text{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &-title{
+      @include text($familyLena,normal,400,24px,24px,#314E57);
+    }
+    &-subtitle{
+      @include text("Rubik",normal,300,16px,19px,#666666);
+    }
+  }
+  &__productInfo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    &-txt{
+      margin-top: 30px;
+      text-align: center;
+      background: #314E56;
+      border-radius: 5px;
+      display: flex;
+      padding: 15px 340px;
+      @include text($familyLena,normal,400,20px,20px,$color01);
+    }
+    &__video{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 907px;
+      height: 198px;
+      background: #282828;
+      border-radius: 5px;
+      &-redBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 62px;
+        height: 49px;
+        background: red;
+        border-radius: 5px;
+      }
+    }
+  }
+  &__aboutBlock{
+    display: flex;
+    column-gap: 45px;
+    align-items: center;
+    &-img{
+      width: 392px;
+      height: 371px;
+      background: #F5F5F5;
+      border: 1px solid #C9C9C9;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        padding: 35px 48px;
+      }
+    }
+    &__priceBlock{
+      display: flex;
+      flex-direction: column;
+      &-title{
+        @include text($familyLena,normal,400,32px,32px,#314E57);
+        margin-bottom: 24px;
+      }
+      &-subtitle{
+        @include text("Rubik",normal,400,16px,19px,#666666);
+        margin-bottom: 48px;
+      }
+      &-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin-bottom: 37px;
+      }
+      &-li{
+        @include text("Rubik",normal,400,16px,19px,#666666);
+        list-style-image: url("../img/cardProduct/check-square.png");
+        list-style-position: inside;
+      }
+      &-box{
+        display: flex;
+        column-gap: 45px;
+        align-items: center;
+      }
+      &-price{
+        @include text("Rubik",normal,500,26.5px,31px,#314E57);
+      }
+      &-btn{
+        position: relative;
+        background: #253B41;
+        display: flex;
+        padding: 22px 40px;
+        border-radius: 5px;
+        cursor: pointer;
+        @include text("Rubik",normal,500,18px,21px,$color01);
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          transition: all 0.3s ease-in-out;
+          background: #3C6672;
+          transform: scale(1.05);
+        }
+        &:after{
+          content: url("../img/cardProduct/Intersect.png");
+          position: absolute;
+          mix-blend-mode: overlay;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__aboutPortions{
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+  }
+  &__insideAboutPortions{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 10px;
+    &-title{
+      @include text("Rubik",normal,500,14px,17px,#282828);
+      margin-bottom: 10px;
+    }
+    &-subtitle{
+      margin-bottom: 10px;
+      @include text("Rubik",normal,400,14px,17px,#999999);
+
+    }
+    &-table{
+      display: flex;
+      flex-direction: column;
+      margin-top: 23px;
+      margin-bottom: 10px;
+      tr{
+        display: flex;
+        border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #E4E4E4;
+        justify-content: space-between;
+        align-items: center;
+      }
+      th:first-child{
+        @include text("Rubik",normal,400,14px,17px,#999999);
+        padding:10px 0 10px 0;
+      }
+      th:last-child{
+        @include text("Rubik",normal,400,14px,17px,#999999);
+        padding:10px 0 10px 0;
+      }
+    }
+    &-text{
+      width: 248px;
+      height: 336px;
+      @include text("Rubik",normal,300,12px,14px,#282828);
+
+    }
+  }
+}

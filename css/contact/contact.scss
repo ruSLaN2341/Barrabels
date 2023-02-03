@@ -1,0 +1,99 @@
+.line{
+  padding-top: 90px;
+}
+.contact{
+  .container{
+    max-width: 1220px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 101px;
+    margin-bottom: 100px;
+    row-gap: 5px;
+  }
+  &__info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &-map{
+      position: absolute;
+      right: 0;
+      bottom: 17px;
+      z-index: 0;
+    }
+    &-title{
+      @include text($familyLena,normal,400,48px,48px,#314E57);
+      margin-bottom: 24px;
+    }
+    &-subtitle{
+      @include text("Rubik",normal,400,18px,21px,#6C6C6C);
+      margin-bottom: 15px;
+    }
+    &-connection{
+      display: flex;
+      width: 70%;
+      column-gap: 20px;
+      align-items: center;
+      background: #FFFFFF;
+      border-radius: 5px;
+      z-index: 1;
+    }
+    &-email,&-number{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 392px;
+      height: 133px;
+      row-gap: 18px;
+      border-radius: 5px;
+      border: 1px solid #DBDBDB;
+      background: #FFFFFF;
+      &Title{
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        @include text("Rubik",normal,400,18px,21px,#6C6C6C);
+      }
+      &Link{
+        text-align: center;
+        @include text("Rubik",normal,500,20px,24px,#314E57);
+        width: 100%;
+      }
+    }
+    &-number{
+      display: flex;
+      margin: 35px 35px 57px 0;
+    }
+    &-email{
+      display: flex;
+      margin: 35px 0 57px 0 ;
+    }
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    &-txt{
+      @include text("Rubik",normal,400,18px,21px,#6C6C6C);
+    }
+    &-list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 28px;
+      padding-left: 45px;
+    }
+    &-li{
+      position: relative;
+      display: flex;
+      @include text("Rubik",normal,400,18px,21px,#6C6C6C);
+      align-items: center;
+      &:after{
+        position: absolute;
+        content: url("../img/contact/check-circle.png");
+        left: -45px;
+      }
+    }
+  }
+}

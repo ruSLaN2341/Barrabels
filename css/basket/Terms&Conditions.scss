@@ -1,0 +1,87 @@
+.terms{
+  .container{
+    width: 627px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  &__block{
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  &__inside{
+    display: flex;
+    margin: 25px 34px 12px 34px;
+    flex-direction: column;
+    text-align: center;
+    height: 222px;
+    row-gap: 15px;
+    background: #F8F8F8;
+    overflow: auto;
+    &::-webkit-scrollbar-thumb{
+      background: #314E57;
+      border-radius: 20px ;
+    }
+    &::-webkit-scrollbar{
+      width: 1px;
+      height: 258px;
+      border: 1px solid #D1D1D1;
+    }
+  }
+  &__title{
+    @include text("Rubik",normal,500,16px,19px,#999999);
+    text-transform: uppercase;
+  }
+  &__subtitle{
+    @include text("Rubik",normal,300,14px,17px,#999999);
+  }
+  &__accept{
+    display: flex;
+    column-gap: 8px;
+    margin-bottom: 50px;
+    input{
+      width: 23px;
+      height: 23px;
+      border: none;
+      cursor: pointer;
+    }
+    label{
+      @include text("Rubik",normal,400,16px,19px,#314E57);
+    }
+  }
+  &__btns{
+    display: flex;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+    align-items: center;
+  }
+  &__btn{
+    padding: 22px 97px;
+    border-radius: 7px;
+    position: relative;
+    background: #253B41;
+    color: white;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer ;
+    &:hover{
+      transition: all 0.3s ease-in-out;
+      background: #3C6672;
+    }
+    @include text("Rubik",normal,500,18px,21px,$color01);
+    &:after{
+      content: url("../img/basket/Intersect.png");
+      position: absolute;
+      mix-blend-mode: overlay;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__price{
+    @include text("Rubik",normal,500,20px,24px,#314E57);
+    padding: 21px 67px;
+  }
+}

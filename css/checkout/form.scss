@@ -1,0 +1,165 @@
+.form{
+  width: 100vw;
+  margin-bottom: 100px;
+  .container{
+    max-width: 1220px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title{
+    @include text("Rubik",normal,500,20px,24px,#314E57);
+  }
+  &__paymentMethodForm{
+    display: flex;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+    input{
+      display: none;
+    }
+    label{
+      cursor: pointer;
+      display: flex;
+      padding: 13px 40px;
+      background: transparent;
+      border-radius: 5px;
+      @include text("Rubik",normal,400,16px,19px,#999999);
+      transition: all 0.3s ease-in-out;
+    }
+    input:checked+label{
+      position: relative;
+      padding: 13px 33px;
+      background: #253B41;
+      color: white;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        transition: all 0.3s ease-in-out;
+        background: #3C6672;
+      }
+      &:after{
+        content: url("../img/index/popularGoods/Intersect.png");
+        position: absolute;
+        mix-blend-mode: overlay;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    &-submit{
+      position: relative;
+      @include text("Rbik",normal,700,20px,24px,$color01);
+      display: flex;
+      padding: 21px 68px;
+      background: #253B41;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      margin-right: 34px;
+      &:hover{
+        transition: all 0.5s ease-in-out;
+        background: #3C6672;
+        transform: scale(1.05);
+      }
+      &:after{
+        content: url("../img/checkout/Intersect.png");
+        position: absolute;
+        mix-blend-mode: overlay;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__nameInput,&__phoneInput,&__addressInput,&__stateSelect,&__countrySelect,&__zipInput{
+    cursor: pointer;
+    outline: none;
+    height: 55px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    padding: 18px 30px 18px 30px;
+    background: #F5F5F5;
+    @include text("Rubik",normal,400,16px,19px,#999999);
+  }
+  &__nameInput,&__addressInput,&__stateSelect{
+    width: 610px;
+    margin-right: 20px;
+  }
+  &__countrySelect,&__zipInput,&__phoneInput{
+    width: 586px;
+  }
+  &__countrySelect,&__stateSelect,&__cardSelect,&__yearSelect{
+    appearance: none;
+  }
+  &__emailInput,&__cardSelect,&__cardnumberInput,&__cvv2Input,&__yearSelect,&__monthInput{
+    padding: 18px 30px 18px 30px;
+    background: #F5F5F5;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    @include text("Rubik",normal,400,16px,19px,#999999);
+  }
+  &__emailInput{
+    width: 296px;
+    margin-right: 16px;
+  }
+  &__cardSelect{
+    width: 185px;
+    margin-right: 16px;
+  }
+  &__cardnumberInput{
+    width: 269px;
+    margin-right: 16px;
+  }
+  &__cvv2Input{
+    width: 126px;
+    margin-right: 16px;
+  }
+  &__yearSelect,&__monthInput{
+    width: 129px;
+  }
+  &__monthInput{
+    margin-right: 16px;
+  }
+  &__message{
+    text-align: center;
+    width: 100% ;
+    @include text("Rubik",normal,300,14px,17px,#555555);
+    a{
+      font-weight: 500;
+      color: #314E57;
+    }
+  }
+  &__ckeckboxInput{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    @include text("Rubik",normal,300,14px,16px,#555555);
+    a{
+      font-weight: 500;
+      color: #314E57;
+    }
+  }
+  &__checkbox{
+    width: 23px;
+    height: 23px;
+    background: #DBDBDB;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

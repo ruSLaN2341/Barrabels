@@ -1,0 +1,70 @@
+.footer{
+  background: #182225;
+  .container{
+    max-width: 1220px;
+    background: #182225;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    column-gap: 190px;
+    margin-top: 50px;
+  }
+  &__logo{
+    @include text($familyLena,normal,400,32px,32px,$color01);
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    &-link{
+      @include text("Rubik",normal,400,14px,17px,#A7A7A7);
+    }
+  }
+  &__contact{
+    @include text($familyLena,normal,400,32px,32px,$color01);
+  }
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 47px;
+  }
+  &__paymentMethods{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.5px;
+    &-text{
+      @include text("Rubik",normal,400,9.2px,11px,#8B8B8B);
+    }
+  }
+  &__cards{
+    display: flex;
+    column-gap: 13.5px;
+  }
+  &__card{
+    display: flex;
+    width: 74px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4B4B4B;
+    border-radius: 6px;
+  }
+  &__copyright{
+    @include text("Rubik",normal,400,12px,14px,#707070);
+  }
+  &__numberBtn{
+    padding: 16px 20px;
+    display: flex;
+    column-gap: 4.5px;
+    align-items: center;
+    @include text("Rubik",normal,400,15.3px,18px,$color01);
+    background: #314E57;
+    border-radius: 3.29221px;
+  }
+}

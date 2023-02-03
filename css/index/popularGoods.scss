@@ -1,0 +1,92 @@
+.popularGoods{
+  .container{
+    max-width: 1220px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-bottom: 100px;
+  }
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  &__title{
+    @include text($familyLena,normal,400,48px,48px,#314E57);
+    text-transform: uppercase;
+  }
+  &__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 289px;
+    height: 390px;
+    border: 1px solid #C9C9C9;
+    border-radius: 5px;
+    &-img{
+      padding: 27px 65px 20px 54px;
+    }
+    &-title{
+      text-align: center;
+      @include text("Rubik",normal,500,16px,19px,#727272);
+      margin-bottom: 15px;
+    }
+    &-data{
+      display: flex;
+      column-gap: 15px;
+      align-items: center;
+      margin-bottom: 15px;
+
+    }
+    &-price{
+      @include text("Rubik",normal,500,19px,22px,#314E57);
+    }
+    &-btn{
+      padding: 17px 75px;
+      border-radius: 7px;
+      position: relative;
+      background: #253B41;
+      color: white;
+      z-index: 2;
+      overflow: hidden;
+      cursor: pointer ;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        transition: all 0.3s ease-in-out;
+        background: #3C6672;
+      }
+      @include text("Rubik",normal,500,18px,21px,$color01);
+      &:after{
+        content: url("../img/index/popularGoods/Intersect.png");
+        position: absolute;
+        mix-blend-mode: overlay;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+.limited{
+  position: relative;
+  text-align: center;
+  &:after{
+    position: absolute;
+    content: attr(text);
+    @include text("Rubik",normal,700,8.5px,12px,$color01);
+    top: 42px;
+    left: 0;
+    z-index: 1;
+  }
+  &:before{
+    position: absolute;
+    content: "";
+    width: 131px;
+    height: 51px;
+    background: url("../img/index/popularGoods/limited.png");
+    top: 20px;
+    left: -8px;
+    z-index: 1;
+  }
+}

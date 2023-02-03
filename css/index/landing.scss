@@ -1,0 +1,118 @@
+.landing{
+  max-width: 1920px;
+  margin: auto;
+  background: #98D4E8;
+  position: relative;
+  .container{
+    max-width: 1220px;
+    margin:auto auto 108px auto;
+    height: 670px;
+    display: flex;
+    padding-top: 180px;
+    flex-direction: column;
+    position: relative;
+  }
+  &__title{
+    margin: 4.5px;
+    @include text($familySignPainter,normal,400,154.41px,149px,$color01);
+
+  }
+  &__subtitle{
+    margin-bottom: 35px;
+    @include text($familyLena,normal,400,70px,70px,#314E57);
+
+  }
+  &__btns{
+    display: flex;
+    column-gap: 29px;
+    margin-bottom: 114px;
+    align-items: center;
+
+    &-btn{
+      padding: 22px 52px;
+      border-radius: 7px;
+      position: relative;
+      background: #253B41;
+      z-index: 2;
+      cursor: pointer ;
+      @include text("Rubik",normal,400,20.4194px,24px,$color01);
+      &:after{
+        content: url("../img/index/landing/Intersect.png");
+        position: absolute;
+        mix-blend-mode: overlay;
+        top: 0;
+        left: 0;
+      }
+    }
+    &-text{
+      @include text("Rubik",normal,400,26px,31px,rgba(58, 85, 94, 1));
+      position: relative;
+      z-index: 1;
+      span{
+        @include text("Rubik",normal,600,26px ,31px, rgba(36, 58, 65, 1));
+      }
+      &:before{
+        position: absolute;
+        content: "";
+        background: url("../img/index/landing/smear.png");
+        width: 368px;
+        height: 173px;
+        left: -110px;
+        top: -62px;
+        z-index: -1;
+      }
+    }
+  }
+  &__arrows{
+    display: flex;
+    column-gap: 20px;
+    svg{
+      cursor: pointer;
+    }
+  }
+  &__nuts{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__item1{
+    position: absolute;
+    top: 200px;
+    left: 0;
+  }
+  &__item2{
+    position: absolute;
+    top: 122px;
+    left: 221px;
+  }
+  &__item3{
+    position: absolute;
+    bottom: 10.2px;
+    left: 179px;
+  }
+  &__item4{
+    position: absolute;
+    top: 86px;
+    left: 40%;
+  }
+  &__item5{
+    position: absolute;
+    bottom: 0;
+    left:38%
+  }
+  &__item6{
+    position: absolute;
+    top: 295px;
+    right: 237.7px;
+  }
+  &__item7{
+    position: absolute;
+    bottom: -81px;
+    right: 232px;
+  }
+  &__item8{
+    position: absolute;
+    top: 54px;
+    right: 0;
+  }
+}
